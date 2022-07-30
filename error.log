@@ -1,0 +1,721 @@
+
+2022-06-04 15:32:38,957 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:527]
+2022-06-04 15:37:22,351 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:524]
+2022-06-04 15:38:11,514 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:524]
+2022-06-04 15:39:33,511 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:524]
+2022-06-04 15:40:18,554 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:525]
+2022-06-04 15:47:02,626 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:526]
+2022-06-04 15:47:41,736 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:526]
+2022-06-04 16:05:32,610 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:527]
+2022-06-04 16:05:54,061 ERROR: Exception on /venues [GET] [in C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Venue
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\app.py", line 115, in venues
+    venues = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2768, in all
+    return self._iter().all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\util\compat.py", line 208, in raise_
+    raise exception
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Venue
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".genres AS "Venue_genres", "Venue".facebook_link AS "Venue_facebook_link", "Venue".website_link AS "Venue_website_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-06-04 16:06:02,597 ERROR: Exception on /shows [GET] [in C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Show
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\app.py", line 475, in shows
+    shows = Shows.query.all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2768, in all
+    return self._iter().all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\util\compat.py", line 208, in raise_
+    raise exception
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Show
+[SQL: SELECT "Show".id AS "Show_id", "Show".venue_id AS "Show_venue_id", "Show".artist_id AS "Show_artist_id", "Show".start_time AS "Show_start_time" 
+FROM "Show"]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-06-04 16:06:12,196 ERROR: Exception on /artists [GET] [in C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Artist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\app.py", line 274, in artists
+    artists = Artist.query.all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2768, in all
+    return self._iter().all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\util\compat.py", line 208, in raise_
+    raise exception
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Artist
+[SQL: SELECT "Artist".id AS "Artist_id", "Artist".name AS "Artist_name", "Artist".city AS "Artist_city", "Artist".state AS "Artist_state", "Artist".phone AS "Artist_phone", "Artist".genres AS "Artist_genres", "Artist".image_link AS "Artist_image_link", "Artist".facebook_link AS "Artist_facebook_link", "Artist".website_link AS "Artist_website_link", "Artist".seeking_venue AS "Artist_seeking_venue", "Artist".seeking_description AS "Artist_seeking_description" 
+FROM "Artist"]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-06-04 16:07:19,156 ERROR: Exception on /artists [GET] [in C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Artist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\app.py", line 274, in artists
+    artists = Artist.query.all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2768, in all
+    return self._iter().all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\util\compat.py", line 208, in raise_
+    raise exception
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Artist
+[SQL: SELECT "Artist".id AS "Artist_id", "Artist".name AS "Artist_name", "Artist".city AS "Artist_city", "Artist".state AS "Artist_state", "Artist".phone AS "Artist_phone", "Artist".genres AS "Artist_genres", "Artist".image_link AS "Artist_image_link", "Artist".facebook_link AS "Artist_facebook_link", "Artist".website_link AS "Artist_website_link", "Artist".seeking_venue AS "Artist_seeking_venue", "Artist".seeking_description AS "Artist_seeking_description" 
+FROM "Artist"]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-06-04 16:07:26,868 ERROR: Exception on /shows [GET] [in C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Show
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\app.py", line 475, in shows
+    shows = Shows.query.all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2768, in all
+    return self._iter().all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\util\compat.py", line 208, in raise_
+    raise exception
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Show
+[SQL: SELECT "Show".id AS "Show_id", "Show".venue_id AS "Show_venue_id", "Show".artist_id AS "Show_artist_id", "Show".start_time AS "Show_start_time" 
+FROM "Show"]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-06-04 16:07:35,226 ERROR: Exception on /venues [GET] [in C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Venue
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\app.py", line 115, in venues
+    venues = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2768, in all
+    return self._iter().all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\util\compat.py", line 208, in raise_
+    raise exception
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Venue
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".genres AS "Venue_genres", "Venue".facebook_link AS "Venue_facebook_link", "Venue".website_link AS "Venue_website_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-06-04 16:08:30,724 ERROR: Exception on /venues [GET] [in C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Venue
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\app.py", line 115, in venues
+    venues = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2768, in all
+    return self._iter().all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\util\compat.py", line 208, in raise_
+    raise exception
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Venue
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".genres AS "Venue_genres", "Venue".facebook_link AS "Venue_facebook_link", "Venue".website_link AS "Venue_website_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-06-04 16:08:47,708 ERROR: Exception on /venues [GET] [in C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Venue
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\app.py", line 115, in venues
+    venues = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2768, in all
+    return self._iter().all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\util\compat.py", line 208, in raise_
+    raise exception
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Venue
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".genres AS "Venue_genres", "Venue".facebook_link AS "Venue_facebook_link", "Venue".website_link AS "Venue_website_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-06-04 16:08:53,018 ERROR: Exception on /venues [GET] [in C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Venue
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\app.py", line 115, in venues
+    venues = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2768, in all
+    return self._iter().all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\util\compat.py", line 208, in raise_
+    raise exception
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Venue
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".genres AS "Venue_genres", "Venue".facebook_link AS "Venue_facebook_link", "Venue".website_link AS "Venue_website_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-06-04 16:09:27,361 ERROR: Exception on /artists [GET] [in C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Artist
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\app.py", line 274, in artists
+    artists = Artist.query.all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2768, in all
+    return self._iter().all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\util\compat.py", line 208, in raise_
+    raise exception
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Artist
+[SQL: SELECT "Artist".id AS "Artist_id", "Artist".name AS "Artist_name", "Artist".city AS "Artist_city", "Artist".state AS "Artist_state", "Artist".phone AS "Artist_phone", "Artist".genres AS "Artist_genres", "Artist".image_link AS "Artist_image_link", "Artist".facebook_link AS "Artist_facebook_link", "Artist".website_link AS "Artist_website_link", "Artist".seeking_venue AS "Artist_seeking_venue", "Artist".seeking_description AS "Artist_seeking_description" 
+FROM "Artist"]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-06-04 16:09:29,771 ERROR: Exception on /venues [GET] [in C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Venue
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\app.py", line 115, in venues
+    venues = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2768, in all
+    return self._iter().all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\util\compat.py", line 208, in raise_
+    raise exception
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Venue
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".genres AS "Venue_genres", "Venue".facebook_link AS "Venue_facebook_link", "Venue".website_link AS "Venue_website_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-06-04 16:10:10,547 ERROR: Exception on /venues [GET] [in C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Venue
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\app.py", line 115, in venues
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2768, in all
+    return self._iter().all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\util\compat.py", line 208, in raise_
+    raise exception
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Venue
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".genres AS "Venue_genres", "Venue".facebook_link AS "Venue_facebook_link", "Venue".website_link AS "Venue_website_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-06-04 16:10:16,897 ERROR: Exception on /venues [GET] [in C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Venue
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\app.py", line 115, in venues
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2768, in all
+    return self._iter().all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\util\compat.py", line 208, in raise_
+    raise exception
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Venue
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".genres AS "Venue_genres", "Venue".facebook_link AS "Venue_facebook_link", "Venue".website_link AS "Venue_website_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-06-04 16:10:58,504 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:524]
+2022-06-04 16:11:03,648 ERROR: Exception on /venues [GET] [in C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Venue
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\app.py", line 112, in venues
+    venues = Venue.query.group_by(Venue.id, Venue.state, Venue.city).all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2768, in all
+    return self._iter().all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\util\compat.py", line 208, in raise_
+    raise exception
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Venue
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".genres AS "Venue_genres", "Venue".facebook_link AS "Venue_facebook_link", "Venue".website_link AS "Venue_website_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-06-04 16:12:23,323 ERROR: Exception on /venues [GET] [in C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py:1455]
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: Venue
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\app.py", line 112, in venues
+    # TODO: replace with real venues data.
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2768, in all
+    return self._iter().all()
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\query.py", line 2903, in _iter
+    result = self.session.execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\orm\session.py", line 1712, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1631, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\sql\elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1498, in _execute_clauseelement
+    ret = self._execute_context(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1862, in _execute_context
+    self._handle_dbapi_exception(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 2043, in _handle_dbapi_exception
+    util.raise_(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\util\compat.py", line 208, in raise_
+    raise exception
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\base.py", line 1819, in _execute_context
+    self.dialect.do_execute(
+  File "C:\Users\NEVILLE\Desktop\project1\fyyur\env\lib\site-packages\sqlalchemy\engine\default.py", line 732, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: Venue
+[SQL: SELECT "Venue".id AS "Venue_id", "Venue".name AS "Venue_name", "Venue".city AS "Venue_city", "Venue".state AS "Venue_state", "Venue".address AS "Venue_address", "Venue".phone AS "Venue_phone", "Venue".image_link AS "Venue_image_link", "Venue".genres AS "Venue_genres", "Venue".facebook_link AS "Venue_facebook_link", "Venue".website_link AS "Venue_website_link", "Venue".seeking_talent AS "Venue_seeking_talent", "Venue".seeking_description AS "Venue_seeking_description" 
+FROM "Venue" GROUP BY "Venue".id, "Venue".state, "Venue".city]
+(Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-06-04 16:15:45,017 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:527]
+2022-06-04 16:17:00,724 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:526]
+2022-06-04 16:17:24,105 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:524]
+2022-06-04 16:17:48,211 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:523]
+2022-06-04 16:18:09,312 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:524]
+2022-06-04 16:18:38,549 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:526]
+2022-06-04 16:19:12,051 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:527]
+2022-06-04 16:21:17,389 INFO: errors [in C:\Users\NEVILLE\Desktop\project1\fyyur\app.py:525]
